@@ -4,7 +4,6 @@ require(['./main'], function () {
         //var viewModel = new ViewModel();
         //ko.applyBindings(viewModel);
 
-        alert(google.maps.Geocoder())
         var geocoder = new google.maps.Geocoder(); //doesn't always get loaded
         var map;
 
