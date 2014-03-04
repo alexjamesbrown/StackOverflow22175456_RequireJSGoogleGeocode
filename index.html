@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <div class="container fluid">
+        <div class="row">
+
+            <div class="span9">
+
+                <form class="form-horizontal" action='' method="POST">
+                    <div class="row-fluid">
+                        <div class="row-fluid">
+
+                            <input type="hidden" name="lat" />
+                            <input type="hidden" name="lon" />
+
+                            <div class="span6">
+
+                                <div class="control-group">
+                                    <label for="addressLine1" class="control-label">Address Line 1<span class="RequiredStar">*</span></label>
+                                    <div class="controls">
+                                        <input id="addressLine1" data-bind="value: address1" type="text" class="input-large">
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label for="addressLine2" class="control-label">Address Line 2</label>
+                                    <div class="controls">
+                                        <input id="addressLine2" data-bind="value: address2" type="text" class="input-large">
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label for="addressTown" class="control-label">Town<span class="RequiredStar">*</span></label>
+                                    <div class="controls">
+                                        <input id="addressTown" data-bind="value: address2" type="text" class="input-large">
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label" for="addressCounty">County</label>
+                                    <div class="controls">
+                                        <select id="addressCounty" data-bind="value: county">
+                                            <option value="Aberdeenshire">Aberdeenshire</option>
+                                            <option value="Angus">Angus</option>
+                                            <option value="Antrim">Antrim</option>
+                                            <option value="Argyll">Argyll</option>
+                                            <option value="Armagh">Armagh</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label" for="addressCountry" data-bind="value: country">Country</label>
+                                    <div class="controls">
+                                        <select id="addressCountry">
+                                            <option value="England">England</option>
+                                            <option value="Scotland">Scotland</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label for="addressPostCode" class="control-label">Post Code<span class="RequiredStar">*</span></label>
+                                    <div class="controls">
+                                        <input id="addressPostCode" data-bind="value: postcode" type="text" class="input-large">
+                                    </div>
+                                </div>
+                            </div>
+
+                            Map:
+                            <div class="span5">
+
+                                <div class="control-group">
+                                    <div class=" map_canvas" style="height: 300px; background-color: grey"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script data-main="javascripts/address" src="javascripts/lib/require.js"></script>
+    </div>
+    <!-- /container -->
+    <footer>
+    </footer>
+</body>
+</html>
