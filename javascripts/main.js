@@ -14,8 +14,13 @@ requirejs.config({
     }
 });
 
+define('gmaps', ['async!http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false'],
+function () {
+    return window.google.maps;
+});
+
 //this is in here as it's used on almost every page
-require(['async!http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false', 'jquery', 'bootstrap', 'geocomplete'], function () {
+require(['gmaps', 'jquery', 'bootstrap', 'geocomplete'], function () {
     $('#locationSearchTextBox').geocomplete()
 	.bind('geocode:result', function (event, result) {
 	    $('#locationSearchResultLat').val(result.geometry.location.lat());

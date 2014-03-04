@@ -1,10 +1,10 @@
 require(['main'], function () {
-    require(['knockout', 'lib/jquery.typing-0.2.0.min'], function (ko, jqueryTyping) {
+    require(['gmaps', 'knockout', 'lib/jquery.typing-0.2.0.min'], function (gmaps, ko, jqueryTyping) {
         //commented out as not relevant
         //var viewModel = new ViewModel();
         //ko.applyBindings(viewModel);
 
-        var geocoder = new google.maps.Geocoder(); //doesn't always get loaded
+        var geocoder = new google.maps.Geocoder(); //doesn't get loaded
         var map;
 
         $('#addressPostCode').typing({
